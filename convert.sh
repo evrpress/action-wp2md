@@ -15,8 +15,8 @@ git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 wp2md -i readme.txt -o README.md
 
 git add README.md
-git commit -m "added readme"
+git commit -m "Updated Readme"
 git remote set-url origin "https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-git push origin --force
+git push origin
 
 echo "✓ Readme Converted!"
