@@ -1,0 +1,12 @@
+name: 'WP2MD'
+description: 'Convert WordPress Plugin Readme Files to GitHub Flavored Markdown.'
+author: 'EvrPress'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+runs:
+  using: 'composite'
+  steps:
+    - id: convert
+      run: ${{ github.action_path }}/convert.sh
+      shell: bash
