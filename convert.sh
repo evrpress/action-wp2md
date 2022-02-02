@@ -12,7 +12,6 @@ sudo chmod a+x /usr/local/bin/wp2md
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-
 ls -a
 
 wp2md -i readme.txt -o README.md
