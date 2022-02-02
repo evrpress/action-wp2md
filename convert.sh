@@ -12,15 +12,11 @@ sudo chmod a+x /usr/local/bin/wp2md
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-ls -a
-
 wp2md -i readme.txt -o README.md
 
 git add README.md
 git commit -m "added readme"
 git remote set-url origin "https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-git push origin
-
-ls -a
+git push origin --force
 
 echo "✓ Readme Converted!"
