@@ -17,6 +17,6 @@ wp2md -i readme.txt -o README.md
 git add README.md
 git commit -m "Updated Readme"
 git remote set-url origin "https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-git push origin
+git push origin --force
 
 echo "✓ Readme Converted!"
